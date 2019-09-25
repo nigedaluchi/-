@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>
+    <input id="name" type="text">    
+    <button id="submit-btn">Submit</button>
+
+    <script>    
+        document.onkeydown = function(e){
+            var event=document.all ? window.event : e;
+            switch(event.keyCode){
+                case 13:
+                 console.log(document.getElementById("name").value);
+                case 27:
+                 document.getElementById("name").value="";
+            }
+        }
+        document.getElementById("submit-btn").onclick = function() {
+            console.log(document.getElementById("name").value);
+        }
+        
+    </script>
+</body>
+</html>

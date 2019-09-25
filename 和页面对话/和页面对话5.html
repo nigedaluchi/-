@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <link rel="stylesheet" href="./和页面对话5.css" media="screen" charset="utf-8">
+    <title>IFE ECMAScript</title>
+</head>
+<body>
+    <div id="bgp">
+    </div>>
+    <script>    
+        var imgMargin=0;
+        fade();
+        function fade(){
+            img=document.getElementById("bgp");
+            setTimeout(fade,100);
+            imgMargin=imgMargin-480;
+            img.style.backgroundPosition="0px"+" "+imgMargin.toString()+"px";
+        }
+    </script>
+</body>
+</html>

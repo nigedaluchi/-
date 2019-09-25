@@ -1,0 +1,20 @@
+.sum {
+    width:100%;
+    background: red;
+}
+.left {
+    position: absolute;
+    background: yellow;
+    width: 100px;
+}
+.middle {
+    position:absolute;
+    margin-left:100px;
+    background: rosybrown;
+    width: calc(100% - 200px);
+}
+.right {
+    margin-left:calc(100% - 100px);
+    background: green;
+    width: 100px;
+}

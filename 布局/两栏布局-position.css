@@ -1,0 +1,13 @@
+.sum {
+    border:solid red;
+}
+.left {
+    position:absolute;
+    left:0;
+    width:30%;
+    border:solid;
+}
+.right {
+    margin-left:30%;
+    border:solid;
+}

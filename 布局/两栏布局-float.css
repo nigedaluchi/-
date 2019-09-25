@@ -1,0 +1,11 @@
+.sum {
+    border:solid;
+}
+.left {
+    float:left;
+    width:30%;
+    border:solid;
+}
+.right {
+    border:solid;
+}

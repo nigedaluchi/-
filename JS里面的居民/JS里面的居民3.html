@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>
+ <div>
+     <button id="DLR">前序遍历</button>
+     <button id="LDR">中序遍历</button>
+     <button id="LRD">后序遍历</button>
+
+     <p id="result"></p>
+ </div>
+<script>    
+var tree = {
+    "id": 0,
+    "name": "root",
+    "left": {
+        "id": 1,
+        "name": "Simon",
+        "left": {
+            "id": 3,
+            "name": "Carl",
+            "left": {
+                "id": 7,
+                "name": "Lee",
+                "left": {
+                    "id": 11,
+                    "name": "Fate"
+                }
+            },
+            "right": {
+                "id": 8,
+                "name": "Annie",
+                "left": {
+                    "id": 12,
+                    "name": "Saber"
+                }
+            }
+        },
+        "right": {
+            "id": 4,
+            "name": "Tony",
+            "left": {
+                "id": 9,
+                "name": "Candy"
+            }
+        }
+    },
+    "right": {
+        "id": 2,
+        "name": "right",
+        "left": {
+            "id": 5,
+            "name": "Carl",
+        },
+        "right": {
+            "id": 6,
+            "name": "Carl",
+            "right": {
+                "id": 10,
+                "name": "Kai"
+            }        
+        }
+    }
+}
+
+var result=document.getElementById("result");
+document.getElementById("DLR").onclick=getListWithDLR(tree);
+document.getElementById("LDR").onclick=getListWithLDR(tree);
+document.getElementById("LRD").onclick=getListWithLRD(tree);
+
+// 假设id和name均不会重复，根据输入name找到对应的id
+function findIdByName(name) {
+
+}
+
+// 假设id和name均不会重复，根据输入id找到对应的name
+function findNameById(id) {
+
+}
+
+// 把这个对象中所有的名字以“前序遍历”的方式全部输出到console中
+function getListWithDLR(tree) {
+    result.innerHTML+=tree.name + " ";
+    if("left" in tree)
+    getListWithDLR(tree.left);
+    if("right" in tree)
+    getListWithDLR(tree.right);
+}
+
+// 把这个对象中所有的名字以“中序遍历”的方式全部输出到console中
+function getListWithLDR(tree) {
+    if("left" in tree)
+    getListWithDLR(tree.left);
+    result.innerHTML+=tree.name + " ";
+    if("right" in tree)
+    getListWithDLR(tree.right);
+
+}
+
+// 把这个对象中所有的名字以“后序遍历”的方式全部输出到console中
+function getListWithLRD(tree) {
+    if("left" in tree)
+    getListWithDLR(tree.left);
+    if("right" in tree)
+    getListWithDLR(tree.right);
+    result.innerHTML+=tree.name + " ";
+}
+</script>
+</body>
+</html>

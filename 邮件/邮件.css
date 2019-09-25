@@ -1,0 +1,12 @@
+.email-sug {
+    list-style:none;
+}
+.email-li {
+    width:150px;
+}
+.email-li-select {
+    background-color: pink;
+}
+.email-li:hover {
+    background-color:rgb(179, 220, 243);
+}

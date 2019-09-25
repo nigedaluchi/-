@@ -1,0 +1,20 @@
+.sum {
+    width:100%;
+    background: red;
+    overflow: hidden;
+}
+.left {
+    background: yellow;
+    float: left;
+    width: 100px;
+}
+.middle {
+    background: rosybrown;
+    float: left;
+    width: calc(100% - 200px);
+}
+.right {
+    background: green;
+    float: right;
+    width: 100px;
+}

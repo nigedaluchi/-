@@ -1,0 +1,62 @@
+.head {
+    width:80%;
+    height:800px;
+    margin:0 auto;
+    background-image: url(images/images/前端学院设计图_01.png);
+    background-repeat:no-repeat;
+}
+.HelloWorld {
+    padding-top:100px;
+    text-align: center;
+    color:#fff;
+}
+.introduce {
+    width:50%;
+    margin:auto;
+    text-align:center;
+    color:#fff;
+}
+.account {
+    height:200px;
+    width:650px;
+    margin:50px auto;
+    border:solid #fff;
+}
+.sign {
+    padding:15px;
+    text-align:center;
+}
+.account-input {
+    width:200px;
+    height:30px;
+    background-color:transparent;
+}
+#signUp {
+    width:100px;
+    height:30px;
+    border:solid transparent;
+    background-color:#fff;
+}
+.teacher {
+    margin:0 auto;
+    width:80%;
+}
+.image {
+    position:relative;
+    margin:auto;
+    width:470px;
+    border:solid;
+}
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 470px;
+    height: 335px;
+    background: rgba(101, 101, 101, 0.6);
+    color: #ffffff;
+    opacity: 0
+}
+.image a:hover .mask {
+    opacity: 1;           
+}

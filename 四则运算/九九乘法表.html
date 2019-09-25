@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>九九乘法表</title>
+</head>
+<body>        
+    <table id="99" border="1">九九乘法表</table>
+</body>
+<script>
+var i=1, j=1;
+for(i=1;i<=9;i++){
+    var tri=document.createElement("tr");
+    document.getElementById("99").appendChild(tri);
+    for(j=1;j<=9;j++){
+        var thj=document.createElement("th");
+        tri.appendChild(thj);
+        thj.innerText="i*j="+(i*j);
+    }
+}
+console.log("qqqqqq");
+</script>
+</html>

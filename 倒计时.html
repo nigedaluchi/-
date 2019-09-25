@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body onload="start()">
+ <div> 
+        <select id="year-select">
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2019">2019</option>
+                <option value="2032">2032</option>
+            </select>
+            
+            <select id="month-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            
+            <select id="day-select">
+            
+            </select>
+            
+            <select id="hour-select">
+                <option value="0">00</option>
+                <option value="1">01</option>        
+                <option value="23">23</option>
+            </select>
+            
+            <select id="minute-select">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option>59</option>
+            </select>
+            
+            <select id="second-select">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option>59</option>
+            </select>
+            
+            <p id="result-wrapper"></p>
+ </div>
+<script>    
+function start(){
+    var selectYear=document.getElementById("year-select").value;    
+    var selectMonth=document.getElementById("month-select").value;
+    var dayNum;
+    
+    if(selectYear%4===0&&selectMonth==2)
+    dayNum=29;
+    else if(selectYear%4!=0&&selectMonth==2)
+    dayNum=28;
+    else if(selectMonth==4||selectMonth==6||selectMonth==9||selectMonth==11)
+    dayNum=30;
+    else dayNum=31;
+
+    console.log(dayNum);
+    document.getElementById("day-select").options.length=0;
+    for(let i=1;i<=dayNum;i++)
+        document.getElementById("day-select").options.add(new Option(i,i));
+
+    var selectDay=document.getElementById("day-select").value;
+    var selectHour=document.getElementById("hour-select").value;
+    var selectMinute=document.getElementById("minute-select").value;
+    var selectSecond=document.getElementById("second-select").value;
+    var today=new Date();
+    var selectDate=new Date();
+    selectDate.setFullYear(selectYear,selectMonth-1,selectDay);
+    selectDate.setHours(selectHour,selectMinute,selectSecond);
+
+    //计算相差天数
+    var days=Math.floor((today.getTime()-selectDate.getTime())/(24*3600*1000));
+    //计算相差小时数
+    var hours=Math.floor((today.getTime()-selectDate.getTime())%(24*3600*1000)/(3600*1000));
+    //计算相差分钟数
+    var minutes=Math.floor((today.getTime()-selectDate.getTime())%(24*3600*1000)%(3600*1000)/(60*1000));
+    //计算相差秒数
+    var seconds=Math.floor((today.getTime()-selectDate.getTime())%(24*3600*1000)%(3600*1000)%(60*1000)/1000);
+
+    document.getElementById("result-wrapper").innerHTML=
+    "现在距离"+selectYear+"年"+selectMonth+"月"+selectDay+"日"+"星期"+selectDate.getDay()+" "
+    +selectHour+":"+selectMinute+":"+selectSecond+"还有"
+    +days+"天"+hours+"小时"+minutes+"分"+seconds+"秒";
+    
+    t=setTimeout("start()",1000);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.sum:after {
+    content:".";
+    display:block;
+    height:0;
+    visibility:hidden;
+    clear:both;
+}
+.head {
+    width:150px;
+    height:800px;
+    float:left;
+    text-align:center;
+    padding:30px;
+    color:#fff;
+    background-color: rgb(114, 175, 245);
+}
+
+.content {
+    float:left;
+    padding:20px;
+}

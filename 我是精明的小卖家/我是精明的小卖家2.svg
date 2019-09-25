@@ -1,0 +1,31 @@
+<svg id="bar-svg" width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_1" y2="345" x2="532.5" y1="345" x1="46.5" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="14" x2="48.5" y1="346" x1="48.5" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_3" y2="339" x2="522.5" y1="344" x1="530.5" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_4" y2="351" x2="526.5" y1="345" x1="530.5" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_5" y2="26" x2="42.5" y1="17" x1="47.5" stroke-width="1.5" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_6" y2="25" x2="55.5" y1="16" x1="48.5" stroke-width="1.5" stroke="#000" fill="none"/>
+  <rect id="svg_7" height="285" width="18" y="61" x="66.5" stroke-width="1.5" stroke="#000" fill="#9ACEE6"/>
+  <rect id="svg_8" height="285" width="18" y="61" x="99.5" stroke-width="1.5" stroke="#000" fill="#9ACEE6"/>
+  <rect id="svg_9" height="285" width="18" y="61" x="133.5" stroke-width="1.5" stroke="#000" fill="#9ACEE6"/>
+  <rect id="svg_10" height="285" width="18" y="61" x="165.5" stroke-width="1.5" stroke="#000" fill="#9ACEE6"/>
+  <rect id="svg_11" height="285" width="18" y="62" x="197.5" stroke-width="1.5" stroke="#000" fill="#9ACEE6"/>
+  <rect id="svg_12" height="285" width="18" y="61" x="229.5" stroke-width="1.5" stroke="#000" fill="#9ACEE6"/>
+  <rect id="svg_13" height="285" width="18" y="60" x="261.5" stroke-width="1.5" stroke="#000" fill="#9ACEE6"/>
+  <rect id="svg_14" height="285" width="18" y="60" x="294.5" stroke-width="1.5" stroke="#000" fill="#9ACEE6"/>
+  <rect id="svg_15" height="285" width="18" y="61" x="328.5" stroke-width="1.5" stroke="#000" fill="#9ACEE6"/>
+  <rect id="svg_16" height="285" width="18" y="60" x="360.5" stroke-width="1.5" stroke="#000" fill="#9ACEE6"/>
+  <rect id="svg_17" height="285" width="18" y="61" x="392.5" stroke-width="1.5" stroke="#000" fill="#9ACEE6"/>
+  <rect id="svg_18" height="285" width="18" y="60" x="424.5" stroke-width="1.5" stroke="#000" fill="#9ACEE6"/>
+ </g>
+</svg>
