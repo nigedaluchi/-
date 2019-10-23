@@ -164,7 +164,10 @@ function drawTable(data) {
     tb=document.getElementById("tb");
     rowSpan(tb,0,1);
     document.getElementById("tb").addEventListener("mouseover",showBar,false);
-    document.getElementById("tb").addEventListener("mouseover",showAndHideEdit,false);
+    document.getElementsByTagName("td")[7].addEventListener("mouseenter",showEdit,false);;
+    document.getElementsByTagName("td")[7].addEventListener("mouseleave",hideEdit,false);;
+
+    //document.getElementById("tb").addEventListener("mouseover",showAndHideEdit,false);
     document.getElementById("save").removeAttribute("disabled");
 ;}
 
@@ -258,27 +261,44 @@ function isMouseLeaveOrEnter(e, handler) {
 }
     
 
-function showAndHideEdit(){
+function showAndHideEdit(event){
     //event.target.onclick=function(){showEdit();}
-    event.target.onmouseover = function(e) {
+    /*event.target.onmouseover = function(e) {
         e = e||window.event;
         if (isMouseLeaveOrEnter(e,this)) {
         　　//运行相关操作
             showEdit();
         }
-    }
-
+    }*/
+    showEdit();
     //event.target.addEventListener("mouseenter",showEdit,false);
-    event.target.addEventListener("mouseleave",hideEdit,false);
+    //event.target.addEventListener("mouseleave",hideEdit,false);
 }
 function showEdit(){
-    if(event.target.nodeName=="TD"){
-        let rowIndex=event.target.parentNode.rowIndex;
-        let colIndex=event.target.cellIndex;
+    //if(event.target.nodeName=="TD"){
+        //let rowIndex=event.target.parentNode.rowIndex;
+        //let colIndex=event.target.cellIndex;
         let value= 50;
-        document.getElementById("tb").rows[rowIndex].cells[colIndex].innerHTML=value+"<button id='edit'>编辑</button>";
-        document.getElementById("edit").addEventListener('click', function(){editTd(value)}, false);
-    }
+        let edit = document.createElement('button');
+        let editText = document.createTextNode('编辑');
+        edit.appendChild(editText);
+        edit.style.display="block";
+        document.getElementsByTagName("td")[7].innerHTML=value;
+        document.getElementsByTagName("td")[7].appendChild(edit);
+        document.getElementsByTagName("td")[7].onclick=function(event){
+            console.log(event.target);
+            if(event.target.nodeName=="BUTTON"){
+                event.target.style.display="none";
+                editTd(value);
+            }
+            else console.log("else")
+        }
+        //document.getElementById("edit").addEventListener('click', function(){editTd(value)}, false);
+        //document.getElementById("tb").rows[rowIndex].cells[colIndex].innerHTML=value+"<button id='edit'>编辑</button>";
+        //if(event.target.nodename=="BUTTON"){
+            //document.getElementById("edit").addEventListener('click', editTd(value), false);
+        //}
+    //}
 }
 function hideEdit(){
     if(event.target.nodeName=="TD"){

@@ -1,0 +1,24 @@
+.sum {
+    width:700px;
+    height:700px;
+    border:solid;
+}
+.cook,.waiter,.custmer {
+    width:150px;
+    height:200px;
+    background-color: bisque;
+    border:solid;
+    display: inline-block;
+}
+.waiter {
+    left:200px;
+    position:absolute;
+}
+.custmerSum {
+    border:solid;
+    width:200px;
+    float:right;
+}
+.custmer {
+    margin-bottom:15px;
+}
